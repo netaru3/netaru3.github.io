@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador-de-clicks</title>
+</head>
+<body>
+    <script>let clicks=0; </script>
+    <button onclick="cont()" style="width:100px; height: 60px ;">
+        sumar 1 click</button> <br>
+        <button onclick="rest()" style="width:100px; height: 60px ;">Restar 1 click</button> <br>
+        <button onclick="clicks=0; document.getElementById('contador').textContent=clicks;
+        console.log(clicks)" 
+        style="width:100px; height: 60px ;">Resetear</button>
+        <h2>Tus clicks:</h2>
+        <h3 id="contador">0</h3>
+    <script>function cont(){clicks++; console.log(clicks);
+    return document.getElementById("contador").textContent=clicks
+    } </script>        
+    <script>function rest(){if(clicks>=1){--clicks; console.log(clicks)
+        return document.getElementById("contador").textContent=clicks} 
+    } </script>
+</body> 
+</html>
